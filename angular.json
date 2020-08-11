@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "spaceXLaunchPrograms": {
+    "spaceXLaunch": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/spaceXLaunchPrograms",
+            "outputPath": "dist/spaceXLaunch",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "spaceXLaunchPrograms:build"
+            "browserTarget": "spaceXLaunch:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "spaceXLaunchPrograms:build:production"
+              "browserTarget": "spaceXLaunch:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "spaceXLaunchPrograms:build"
+            "browserTarget": "spaceXLaunch:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "spaceXLaunchPrograms-e2e": {
+    "spaceXLaunch-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "spaceXLaunchPrograms:serve"
+            "devServerTarget": "spaceXLaunch:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "spaceXLaunchPrograms:serve:production"
+              "devServerTarget": "spaceXLaunch:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "spaceXLaunchPrograms"
+  "defaultProject": "spaceXLaunch"
 }

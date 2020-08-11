@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'spaceXLaunchPrograms'`, () => {
+  it(`should have as title 'spaceXLaunch'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('spaceXLaunchPrograms');
+    expect(app.title).toEqual('spaceXLaunch');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to spaceXLaunchPrograms!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to spaceXLaunch!');
   });
 });
