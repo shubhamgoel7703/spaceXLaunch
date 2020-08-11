@@ -12,8 +12,8 @@ export class AppComponent implements OnInit {
 
   spaceXLaunchList: ISpaceXLaunchObject[] = [];
 
-  link = ["https://img.favpng.com/4/18/20/kennedy-space-center-launch-complex-39-spacex-crs-1-bulgariasat-1-falcon-9-png-favpng-PQUf074yNNWdrHxXevDTXxN8z.jpg",
-    "https://www.seradata.com/SSI/wp-content/uploads/2014/01/SpaceX-Logo-620x149.jpg"]
+  // link = ["https://img.favpng.com/4/18/20/kennedy-space-center-launch-complex-39-spacex-crs-1-bulgariasat-1-falcon-9-png-favpng-PQUf074yNNWdrHxXevDTXxN8z.jpg",
+  //   "https://www.seradata.com/SSI/wp-content/uploads/2014/01/SpaceX-Logo-620x149.jpg"]
 
   constructor(private spaceXApiService: SpaceXApiService) {
   }
@@ -38,9 +38,9 @@ export class AppComponent implements OnInit {
           obj.mission_id = resp[i].mission_id;
           obj.mission_name = resp[i].mission_name;
 
-          let randomNumber = Math.floor(Math.random() * 101);
-          let index = randomNumber > 50 ? 1 : 0;
-          obj.imageUrl = this.link[index];
+          // let randomNumber = Math.floor(Math.random() * 101);
+          // let index = randomNumber > 50 ? 1 : 0;
+          // obj.imageUrl = this.link[index];
 
           this.spaceXLaunchList.push(obj);
         }

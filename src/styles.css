@@ -2,12 +2,21 @@
 
 @import "~bootstrap/dist/css/bootstrap.css";
 
+/* button change */
 @media screen and (max-width: 1125px) and (min-width: 768px) {
     .fullButtonWidth {
         flex: 0 0 100%;
         max-width: 100%;
     }
-  }
+}
+
+/*Tablet view*/
+@media screen and (max-width: 1024px) and (min-width: 700px) {
+    .columnSizeToHalfWidthForTablet {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
 
 body{
 background-color: #F4F4F4;

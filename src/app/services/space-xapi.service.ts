@@ -16,7 +16,7 @@ export class SpaceXApiService extends BaseService {
   getInitialList() {
     return new Promise((resolve, reject) => {
       try {
-        let apiName = 'https://api.spacexdata.com/v3/launches?limit=10';
+        let apiName = 'https://api.spacexdata.com/v3/launches?limit=100';
         this.getCall(apiName).subscribe((data) => {
           if (data != null && data != undefined) {
             resolve(data);
@@ -40,7 +40,7 @@ export class SpaceXApiService extends BaseService {
         let queryStringLandSuccess = (land_success == true || land_success == false) ? '&land_success=' + land_success : '';
         console.log(queryStringLaunchYear, queryStringLaunchSuccess, queryStringLandSuccess);
         console.log("query param " + queryStringLaunchYear + queryStringLaunchSuccess + queryStringLandSuccess)
-        let apiName = 'https://api.spacexdata.com/v3/launches?limit=10' + queryStringLaunchYear + queryStringLaunchSuccess + queryStringLandSuccess;
+        let apiName = 'https://api.spacexdata.com/v3/launches?limit=100' + queryStringLaunchYear + queryStringLaunchSuccess + queryStringLandSuccess;
         this.getCall(apiName).subscribe((data) => {
           if (data != null && data != undefined) {
             resolve(data);
