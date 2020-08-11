@@ -1,0 +1,65 @@
+<nav>
+  <div>
+    <div class="box p-3">
+
+      <div class="row p-3">
+        <div class="col-md-12">
+          <h5>Filters</h5>
+        </div>
+
+        <div class="col-md-12 text-center underlineText mt-3">
+          <p class="p-0 m-0">Launch Year</p>
+        </div>
+        <div class="col-md-12 pt-3">
+
+          <div class="row">
+
+            <div class="fullButtonWidth col-6 text-center p-2 " *ngFor="let item of yearsArray">
+              <button class="btn buttonClass smallButton">{{item}}</button>
+            </div>
+
+            <!-- <div class="col-md-6 text-center">
+              <button class="btn btn-success ">2013</button>
+            </div> -->
+          </div>
+        </div>
+
+
+        <div class="col-md-12 text-center underlineText mt-3">
+          <p class="p-0 m-0">Successful Launch</p>
+        </div>
+        <div class="col-md-12 pt-3">
+
+          <div class="row">
+            <div class="fullButtonWidth col-6 text-center pb-3">
+              <button class="btn buttonClass">True</button>
+            </div>
+            <div class="fullButtonWidth col-6 text-center">
+              <button class="btn buttonClass">False</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-12 text-center underlineText mt-3">
+          <p class="p-0 m-0">Successful Landing</p>
+        </div>
+        <div class="col-md-12 pt-3">
+
+          <div class="row">
+            <div class="fullButtonWidth col-6 text-center pb-3">
+              <button class="btn buttonClass">True</button>
+            </div>
+            <div class="fullButtonWidth col-6 text-center">
+              <button class="btn buttonClass">False</button>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</nav>
