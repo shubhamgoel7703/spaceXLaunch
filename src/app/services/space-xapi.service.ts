@@ -32,5 +32,28 @@ export class SpaceXApiService extends BaseService {
     });
   }
 
+  getFilteredList(launch_year, launch_success, land_success) {
+    return new Promise((resolve, reject) => {
+      try {
+        let queryStringLaunchYear = (launch_year) ? '&launch_year=' + launch_year : '';
+        let queryStringLaunchSuccess = (launch_success == true || launch_success == false) ? '&launch_success=' + launch_success : '';
+        let queryStringLandSuccess = (land_success == true || land_success == false) ? '&land_success=' + land_success : '';
+        console.log(queryStringLaunchYear, queryStringLaunchSuccess, queryStringLandSuccess);
+        console.log("query param " + queryStringLaunchYear + queryStringLaunchSuccess + queryStringLandSuccess)
+        let apiName = 'https://api.spacexdata.com/v3/launches?limit=10' + queryStringLaunchYear + queryStringLaunchSuccess + queryStringLandSuccess;
+        this.getCall(apiName).subscribe((data) => {
+          if (data != null && data != undefined) {
+            resolve(data);
+          } else {
+            reject();
+          }
+        }, (error) => {
+          reject(error);
+        })
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
 
 }
